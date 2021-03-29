@@ -6,6 +6,7 @@ We're going to use CloudFormation to apply a template, which will create the fol
 Policy Resource, which is a Managed Policy that allows access to all S3 Buckets, except for the "catpics" bucket!
 
 \
+**Creating a Stack using CloudFormation Template:** \
 CloudFormation → Create Stack \
 Upload Template → Choose File → Copy & Paste in the following template \
 Next
@@ -71,6 +72,7 @@ Next
 Because this Stack will create an IAM User, scroll all the way down and acknowledge this "Capability" \
 Create Stack
 
+/
 Click on the Resources tab and see the (4) resources that have been created. \
 S3 Buckets: animalpics & catpics \
 IAM Managed Policy: policy \
@@ -79,6 +81,7 @@ IAM User: sally
 Right Click on Sally's Physical ID & open in new tab \
 Notice the attched policy IAMUserChangePassword
 
+**Notice the effects of the Managed Policy:** \
 CloudFormation → Stacks → click on the IAM stack → Outputs tab → copy the Value for the Sally User Name \
 Open a New Browser, or Private Tab \
 Log into AWS console using the Sally User Name Value \
@@ -172,3 +175,9 @@ IAM → Users → Sally → Delete Sally's Managed Policy \
 S3 → Buckets → select the catpics Bucket → Empty \
 S3 → Buckets → select the animalpics Bucket → Empty \
 CloudFormation → Stacks → select the Stack → Delete → Delete Stack
+
+**Make sure there are no errors for the Stack Deletion!!**
+Click on the Stack → Events tab \
+Make sure there are no errors in the Status field \
+If we forgot to delete the files in the Buckets before deleting the Stack, there would likely be an error. \
+Also, if we didn't delete the Managed Policy, we wouldn't have been able to delete Sally!
