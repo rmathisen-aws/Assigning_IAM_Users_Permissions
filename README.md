@@ -87,7 +87,8 @@ Next: Review \
 Add Permission
 
 Click on the AllowAllS3ExceptCats policy → {} JSON \
-```< {
+```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
