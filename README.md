@@ -52,4 +52,18 @@ Copy the following into your clipboard: \
          ]
        }
     ]
-}
+} \ 
+
+Go back to where you're logged into your iamadmin \
+IAM → Access Management → Users → click on the Sally User Name \
+Permissions tab → Add Inline Policy → JSON tab & paste in the JSON policy \
+Review Policy \
+Name: s3admininline \
+Create Policy
+
+Notice the AWS Managed Policy and Inline Policy
+
+\
+Go back to where you're logged in as Sally \
+S3 → Buckets \
+Now we have access to iam-animalpics & iam-catpics Buckets
