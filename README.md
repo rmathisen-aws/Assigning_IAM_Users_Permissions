@@ -67,3 +67,5 @@ Notice the AWS Managed Policy and Inline Policy
 Go back to where you're logged in as Sally \
 S3 → Buckets \
 Now we have access to iam-animalpics & iam-catpics Buckets
+
+You will be able to upload files to these buckets, and open those files!
