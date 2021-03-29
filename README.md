@@ -131,6 +131,7 @@ S3 → Buckets & Refresh \
 Notice the Access Deny error (as expected)
 
 \
+**Attaching a Managed Policy:** /
 Go back to where you're logged into your iamadmin \
 IAM → Users → Permissions tab → Add Permissions (to add a Managed Policy) → Attach Existing Policies Directly \
 Search: AllowAllS3ExceptCats (select this) \
@@ -159,4 +160,15 @@ Click on the AllowAllS3ExceptCats policy → {} JSON \
 } 
 ```
 
-dafdfda
+Go back to where you're logged in as Sally \
+S3 → Buckets & Refresh \
+Attempting to Access the catpics Bucket will be Denied, \
+but you do still have Access to the animalpics Bucket! You can add/view any files
+
+\
+**Clean Up!!** \
+Go back to where you're logged into your iamadmin \
+IAM → Users → Sally → Delete Sally's Managed Policy \
+S3 → Buckets → select the catpics Bucket → Empty \
+S3 → Buckets → select the animalpics Bucket → Empty \
+CloudFormation → Stacks → select the Stack → Delete → Delete Stack
