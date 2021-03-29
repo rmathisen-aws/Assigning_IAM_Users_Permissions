@@ -4,11 +4,8 @@ We're going to use CloudFormation to apply a template, which will create the fol
 (1) IAM User ("Sally") with a managed policy attached requiring you to change the password upon first login. \
 (2) S3 Buckets ("catpics"; "animalpics"). \
 Policy Resource, which is a Managed Policy that allows access to all S3 Buckets, except for the "catpics" bucket!
-If you'd like to perform these steps without CFN Automation, perform the steps in these manuals.
 
-[Adding IAM Admin User](https://github.com/rmathisen-aws/Adding_IAM_Admin_User/blob/main/README.md) \
-[S3 Bucket](https://github.com/rmathisen-aws/S3_Bucket)
-
+\
 CloudFormation → Create Stack \
 Upload Template → Choose File → Copy & Paste in the following template \
 Next
