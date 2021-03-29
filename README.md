@@ -78,3 +78,30 @@ IAM → Users → Permissions tab → Delete the Inline Policy
 Go back to where you're logged in as Sally \
 S3 → Buckets & Refresh \
 Notice the Access Deny error (as expected)
+
+\
+Go back to where you're logged into your iamadmin \
+IAM → Users → Permissions tab → Add Permissions (to add a Managed Policy) → Attach Existing Policies Directly \
+Search: AllowAllS3ExceptCats (select this) \
+Next: Review \
+Add Permission
+
+Click on the AllowAllS3ExceptCats policy → {} JSON \
+<{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": "s3:*",
+            "Resource": "*",
+            "Effect": "Allow"
+        },
+        {
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::iam-catpics-z157hoyizcsb",
+                "arn:aws:s3:::iam-catpics-z157hoyizcsb/*"
+            ],
+            "Effect": "Deny"
+        }
+    ]
+}>
