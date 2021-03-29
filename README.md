@@ -38,6 +38,7 @@ Notice that you don't have any permissions to access EC2, or S3, or any other pe
 
 **Assign S3 Full Admin as an Inline Policy:** \
 Copy the following into your clipboard: \
+```
 {
    "Version":"2012-10-17",
    "Statement":[
@@ -52,7 +53,8 @@ Copy the following into your clipboard: \
          ]
        }
     ]
-} \ 
+} 
+```
 
 Go back to where you're logged into your iamadmin \
 IAM → Access Management → Users → click on the Sally User Name \
