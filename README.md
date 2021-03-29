@@ -69,3 +69,12 @@ S3 → Buckets \
 Now we have access to iam-animalpics & iam-catpics Buckets
 
 You will be able to upload files to these buckets, and open those files!
+
+\
+Go back to where you're logged into your iamadmin \
+IAM → Users → Permissions tab → Delete the Inline Policy
+
+\
+Go back to where you're logged in as Sally \
+S3 → Buckets & Refresh \
+Notice the Access Deny error (as expected)
